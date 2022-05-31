@@ -2,18 +2,23 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: prometheus
+  name: loki-stack
   namespace: flux-system
 spec:
   chart:
     spec:
-      chart: prometheus
+      chart: loki-stack
       reconcileStrategy: ChartVersion
       sourceRef:
         kind: HelmRepository
-        name: prometheus-community
+        name: grafana
   install:
     createNamespace: true
   interval: 1m0s
-  targetNamespace: prometheus
+  targetNamespace: monitoring
+  values:
+    grafana:
+      enabled: true
+    prometheus:
+      enabled: true
 
