@@ -17,8 +17,6 @@ spec:
   interval: 1m0s
   targetNamespace: traefik
   values:
-    deployment:
-      kind: DaemonSet
     ingressClass:
       enabled: true
       isDefaultClass: true
