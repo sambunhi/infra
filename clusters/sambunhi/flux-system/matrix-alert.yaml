@@ -1,0 +1,20 @@
+---
+apiVersion: notification.toolkit.fluxcd.io/v1beta1
+kind: Alert
+metadata:
+  name: matrix
+  namespace: flux-system
+spec:
+  eventSeverity: info
+  eventSources:
+  - kind: GitRepository
+    name: '*'
+  - kind: HelmRepository
+    name: '*'
+  - kind: HelmRelease
+    name: '*'
+  - kind: Kustomization
+    name: '*'
+  providerRef:
+    name: matrix
+
