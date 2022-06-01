@@ -62,9 +62,18 @@ spec:
               editable: true
               options:
                 path: /var/lib/grafana/dashboards/node
+            - name: 'prometheus'
+              orgId: 1
+              folder: 'Prometheus'
+              type: file
+              disableDeletion: false
+              editable: true
+              options:
+                path: /var/lib/grafana/dashboards/prometheus
       dashboardsConfigMaps:
         flux: flux-dashboards
         node: node-dashboards
+        prometheus: prometheus-dashboards
     prometheus:
       enabled: true
 
