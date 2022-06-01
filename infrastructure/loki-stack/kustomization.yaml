@@ -10,3 +10,10 @@ configMapGenerator:
     files:
       - ../../external/flux/manifests/monitoring/monitoring-config/dashboards/cluster.json
       - ../../external/flux/manifests/monitoring/monitoring-config/dashboards/control-plane.json
+  - name: node-dashboards
+    namespace: monitoring
+    files:
+      - ../../dashboard-prebuilts/node_exporter/node-cluster-rsrc-use.json
+      - ../../dashboard-prebuilts/node_exporter/node-rsrc-use.json
+      - ../../dashboard-prebuilts/node_exporter/nodes-darwin.json
+      - ../../dashboard-prebuilts/node_exporter/nodes.json

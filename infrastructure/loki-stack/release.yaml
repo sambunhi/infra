@@ -31,8 +31,17 @@ spec:
               editable: true
               options:
                 path: /var/lib/grafana/dashboards/flux
+            - name: 'node'
+              orgId: 1
+              folder: 'Node Exporter'
+              type: file
+              disableDeletion: false
+              editable: true
+              options:
+                path: /var/lib/grafana/dashboards/node
       dashboardsConfigMaps:
         flux: flux-dashboards
+        node: node-dashboards
     prometheus:
       enabled: true
 
