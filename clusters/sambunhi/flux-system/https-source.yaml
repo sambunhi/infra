@@ -1,0 +1,13 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: sambuni-infra-https
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  recurseSubmodules: true
+  ref:
+    branch: main
+  url: https://github.com/sambunhi/infra
+

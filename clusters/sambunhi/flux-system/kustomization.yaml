@@ -8,3 +8,4 @@ resources:
   - commit-status-alert-infrastructure.yaml
   - matrix.yaml
   - matrix-alert.yaml
+  - https-source.yaml
