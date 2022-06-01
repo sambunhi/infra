@@ -1,0 +1,12 @@
+---
+apiVersion: notification.toolkit.fluxcd.io/v1beta1
+kind: Provider
+metadata:
+  name: github
+  namespace: flux-system
+spec:
+  address: https://github.com/sambunhi/infra
+  secretRef:
+    name: github-commit-status-token
+  type: github
+
