@@ -5,7 +5,7 @@ metadata:
   name: matrix
   namespace: flux-system
 spec:
-  eventSeverity: info
+  eventSeverity: error
   eventSources:
   - kind: GitRepository
     name: '*'
