@@ -41,7 +41,7 @@ spec:
             version: 1
             isDefault: false
             jsonData:
-              timeInterval: 1m
+              timeInterval: 30s
       dashboardProviders:
         dashboardproviders.yaml:
           apiVersion: 1
