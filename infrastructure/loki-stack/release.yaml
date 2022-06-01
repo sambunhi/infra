@@ -19,6 +19,29 @@ spec:
   values:
     grafana:
       enabled: true
+      sidecar:
+        datasources:
+          enabled: false
+      datasources:
+        datasources.yaml:
+          apiVersion: 1
+          datasources:
+          - name: Loki
+            type: loki
+            access: proxy
+            url: http://monitoring-loki-stack:3100
+            version: 1
+            isDefault: true
+            jsonData:
+              maxLines: 1000
+          - name: Prometheus
+            type: prometheus
+            access: proxy
+            url: http://monitoring-loki-stack-prometheus-server:80
+            version: 1
+            isDefault: false
+            jsonData:
+              timeInterval: 1m
       dashboardProviders:
         dashboardproviders.yaml:
           apiVersion: 1
