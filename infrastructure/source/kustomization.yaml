@@ -4,3 +4,4 @@ namespace: flux-system
 resources:
   - bitnami.yaml
   - grafana.yaml
+  - traefik.yaml
