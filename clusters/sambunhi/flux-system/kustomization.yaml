@@ -4,3 +4,5 @@ resources:
   - gotk-components.yaml
   - gotk-sync.yaml
   - github-commit-status.yaml
+  - commit-status-alert.yaml
+  - commit-status-alert-infrastructure.yaml
