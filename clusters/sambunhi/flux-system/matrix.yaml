@@ -5,7 +5,7 @@ metadata:
   name: matrix
   namespace: flux-system
 spec:
-  channel: '#cloudnative:xdavidwu.link'
+  channel: '!ioEVkhMSUlouHrpUFw:xdavidwu.link'
   secretRef:
     name: matrix
   type: matrix
