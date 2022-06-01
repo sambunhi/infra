@@ -6,5 +6,5 @@ resources:
 configMapGenerator:
   - name: grafana-dashboards
     files:
-      - flux-cluster.json
-      - flux-control-plane.json
+      - ../../external/flux/manifests/monitoring/monitoring-config/dashboards/cluster.json
+      - ../../external/flux/manifests/monitoring/monitoring-config/dashboards/control-plane.json
