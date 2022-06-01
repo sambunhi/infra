@@ -1,3 +1,6 @@
 [submodule "external/flux"]
 	path = external/flux
 	url = https://github.com/fluxcd/flux2
+[submodule "external/loki"]
+	path = external/loki
+	url = https://github.com/grafana/loki
