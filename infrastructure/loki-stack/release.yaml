@@ -76,4 +76,7 @@ spec:
         prometheus: prometheus-dashboards
     prometheus:
       enabled: true
+      server:
+        global:
+          scrape_interval: 30s
 
