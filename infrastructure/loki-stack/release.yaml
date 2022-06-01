@@ -31,17 +31,8 @@ spec:
               editable: true
               options:
                 path: /var/lib/grafana/dashboards/flux
-            - name: 'loki'
-              orgId: 1
-              folder: 'Loki'
-              type: file
-              disableDeletion: false
-              editable: true
-              options:
-                path: /var/lib/grafana/dashboards/loki
       dashboardsConfigMaps:
         flux: flux-dashboards
-        loki: loki-dashboards
     prometheus:
       enabled: true
 

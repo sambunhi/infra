@@ -10,16 +10,3 @@ configMapGenerator:
     files:
       - ../../external/flux/manifests/monitoring/monitoring-config/dashboards/cluster.json
       - ../../external/flux/manifests/monitoring/monitoring-config/dashboards/control-plane.json
-  - name: loki-dashboards
-    namespace: monitoring
-    files:
-      - ../../external/loki/production/loki-mixin-compiled/dashboards/loki-chunks.json
-      - ../../external/loki/production/loki-mixin-compiled/dashboards/loki-deletion.json
-      - ../../external/loki/production/loki-mixin-compiled/dashboards/loki-logs.json
-      - ../../external/loki/production/loki-mixin-compiled/dashboards/loki-mixin-recording-rules.json
-      - ../../external/loki/production/loki-mixin-compiled/dashboards/loki-operational.json
-      - ../../external/loki/production/loki-mixin-compiled/dashboards/loki-reads-resources.json
-      - ../../external/loki/production/loki-mixin-compiled/dashboards/loki-reads.json
-      - ../../external/loki/production/loki-mixin-compiled/dashboards/loki-retention.json
-      - ../../external/loki/production/loki-mixin-compiled/dashboards/loki-writes-resources.json
-      - ../../external/loki/production/loki-mixin-compiled/dashboards/loki-writes.json
