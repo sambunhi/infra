@@ -5,7 +5,8 @@ metadata:
   namespace: flux-system
 spec:
   rules:
-    - http:
+    - host: flux.sambunhi.nycu.one
+      http:
         paths:
           - pathType: Prefix
             path: /
