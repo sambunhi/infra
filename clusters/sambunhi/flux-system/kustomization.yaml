@@ -10,3 +10,4 @@ resources:
   - matrix-alert.yaml
   - https-source.yaml
   - webhook-ingress.yaml
+  - webhook-receiver.yaml
