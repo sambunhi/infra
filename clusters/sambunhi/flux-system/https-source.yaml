@@ -5,7 +5,7 @@ metadata:
   name: sambunhi-infra-https
   namespace: flux-system
 spec:
-  interval: 1m0s
+  interval: 1h0m0s
   recurseSubmodules: true
   ref:
     branch: main
