@@ -23,6 +23,20 @@ spec:
         hosts:
           - grafana.sambunhi.nycu.one
       enabled: true
+      grafana.ini:
+        server:
+          root_url: https://grafana.sambunhi.nycu.one/
+        auth.github:
+          enabled: true
+          allow_sign_up: true
+          scopes: user:email,read:org
+          auth_url: https://github.com/login/oauth/authorize
+          token_url: https://github.com/login/oauth/access_token
+          api_url: https://api.github.com/user
+          allowed_organizations: sambunhi
+          client_id: e6476d3efb874b345cc4
+      envFromSecrets:
+        - grafana-envs
       sidecar:
         datasources:
           enabled: false
