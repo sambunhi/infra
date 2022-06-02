@@ -16,6 +16,9 @@ In namespace > secret > data:
 		* `mariadb-galera-mariabackup-password`
 		* `mariadb-root-password`
 			* These should be <= 32 bytes
+* `monitoring`
+	* `grafana-envs`
+		* `GF_AUTH_GITHUB_CLIENT_SECRET`: GitHub OAuth client secret
 
 # Bootstrapping / Upgrading flux
 
