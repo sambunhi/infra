@@ -18,6 +18,10 @@ spec:
   targetNamespace: monitoring
   values:
     grafana:
+      ingress:
+        enabled: true
+        hosts:
+          - grafana.sambunhi.nycu.one
       enabled: true
       sidecar:
         datasources:
