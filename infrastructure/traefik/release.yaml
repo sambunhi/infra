@@ -34,3 +34,5 @@ spec:
         httpChallenge:
           entryPoint: web
         storage: /data/acme.json
+    podSecurityContext:
+      fsGroup: null
