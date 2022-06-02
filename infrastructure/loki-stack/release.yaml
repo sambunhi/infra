@@ -36,7 +36,7 @@ spec:
           allowed_organizations: sambunhi
           client_id: e6476d3efb874b345cc4
       envFromSecrets:
-        - grafana-envs
+        - name: grafana-envs
       sidecar:
         datasources:
           enabled: false
