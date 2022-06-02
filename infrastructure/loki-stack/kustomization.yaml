@@ -20,3 +20,7 @@ configMapGenerator:
     namespace: monitoring
     files:
       - ../../dashboard-prebuilts/prometheus/prometheus.json
+  - name: mariadb-dashboards
+    namespace: monitoring
+    files:
+      - ../../dashboard-prebuilts/mysqld_exporter/mysql-overview.json

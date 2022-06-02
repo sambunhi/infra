@@ -70,10 +70,19 @@ spec:
               editable: true
               options:
                 path: /var/lib/grafana/dashboards/prometheus
+            - name: 'mariadb'
+              orgId: 1
+              folder: 'MariaDB'
+              type: file
+              disableDeletion: false
+              editable: true
+              options:
+                path: /var/lib/grafana/dashboards/mariadb
       dashboardsConfigMaps:
         flux: flux-dashboards
         node: node-dashboards
         prometheus: prometheus-dashboards
+        mariadb: mariadb-dashboards
     prometheus:
       enabled: true
       server:
