@@ -20,3 +20,5 @@ spec:
     existingSecret: mariadb-galera
     metrics:
       enabled: true
+      extraFlags:
+        - --collect.info_schema.processlist
