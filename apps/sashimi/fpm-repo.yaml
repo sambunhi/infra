@@ -1,0 +1,10 @@
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImageRepository
+metadata:
+  name: fpm
+  namespace: sashimi
+spec:
+  image: ghcr.io/sambunhi/sashimi/fpm
+  interval: 1m0s
+
