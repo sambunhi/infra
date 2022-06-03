@@ -11,9 +11,10 @@ spec:
         branch: main
     commit:
       author:
-        email: xdavidwuph@gmail.com
+        email: flux@sambunhi.nycu.one
         name: Flux image automation
-      messageTemplate: 'apps: sambunhi: {{range .Updated.Images}}{{.}}{{end}}'
+      messageTemplate: >
+        'apps: sashimi: {{range .Updated.Images}}{{.Repository}}:{{.Identifier}} {{end}}'
   interval: 1m0s
   sourceRef:
     kind: GitRepository
