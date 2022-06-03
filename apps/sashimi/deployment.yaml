@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sashimi
+spec:
+  replicas: 2
+  template:
+    spec:
+      initContainers:
+        - name: laravel-cache-populate
+          image: ghcr.io/sambunhi/sashimi/fpm:latest
+          command:
+            - /bin/sh
+            - -c
+            - php artisan config:cache && php artisan event:cache
+          volumeMounts:
+            - mountPath: /srv/http/.env
+              name: env
+              subPath: .env
+            - mountPath: /srv/http/bootstrap/cache
+              name: bootstrap-cache
+      containers:
+        - name: nginx
+          image: ghcr.io/sambunhi/sashimi/nginx:latest
+          readinessProbe:
+            httpGet:
+              port: 8000
+              path: /
+        - name: fpm
+          image: ghcr.io/sambunhi/sashimi/fpm:latest
+          volumeMounts:
+            - mountPath: /srv/http/.env
+              name: env
+              subPath: .env
+            - mountPath: /srv/http/bootstrap/cache
+              name: bootstrap-cache
+              readOnly: true
+      enableServiceLinks: false
+      automountServiceAccountToken: false
+      volumes:
+        - name: env
+          secret:
+            secretName: config
+        - name: bootstrap-cache
+          emptyDir:
+            medium: Memory
