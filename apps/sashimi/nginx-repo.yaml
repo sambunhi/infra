@@ -6,5 +6,5 @@ metadata:
   namespace: sashimi
 spec:
   image: ghcr.io/sambunhi/sashimi/nginx
-  interval: 1m0s
+  interval: 1h0m0s
 

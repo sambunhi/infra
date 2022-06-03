@@ -1,0 +1,19 @@
+---
+apiVersion: notification.toolkit.fluxcd.io/v1beta1
+kind: Receiver
+metadata:
+  name: sashimi-github
+  namespace: sashimi
+spec:
+  events:
+  - ping
+  - package
+  resources:
+  - kind: ImageRepository
+    name: fpm
+  - kind: ImageRepository
+    name: nginx
+  secretRef:
+    name: image-update-webhook-token
+  type: github
+

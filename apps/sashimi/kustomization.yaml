@@ -12,6 +12,7 @@ resources:
 - nginx-repo.yaml
 - nginx-policy.yaml
 - image-update.yaml
+- webhook.yaml
 images:
 - name: ghcr.io/sambunhi/sashimi/fpm
   newTag: sha-b6cabb8-27 # {"$imagepolicy": "sashimi:fpm:tag"}
