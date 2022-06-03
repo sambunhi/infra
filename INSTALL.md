@@ -19,6 +19,11 @@ In namespace > secret > data:
 * `monitoring`
 	* `grafana-envs`
 		* `GF_AUTH_GITHUB_CLIENT_SECRET`: GitHub OAuth client secret
+* `sashimi`
+	* `image-update-webhook-token`
+		* `token`: random string used as webhook secret
+	* `config`
+		* `env`: Laravel .env
 
 # Bootstrapping / Upgrading flux
 
