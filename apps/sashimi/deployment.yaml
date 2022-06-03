@@ -12,7 +12,7 @@ spec:
           command:
             - /bin/sh
             - -c
-            - php artisan config:cache && php artisan event:cache
+            - php81 artisan config:cache && php81 artisan event:cache
           volumeMounts:
             - mountPath: /srv/http/.env
               name: env
