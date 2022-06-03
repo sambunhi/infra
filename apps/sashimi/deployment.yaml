@@ -5,6 +5,9 @@ metadata:
 spec:
   replicas: 2
   template:
+    metadata:
+      annotations:
+        kubectl.kubernetes.io/default-container: fpm
     spec:
       initContainers:
         - name: laravel-cache-populate
