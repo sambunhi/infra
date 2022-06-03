@@ -10,7 +10,7 @@ spec:
           - path: /
             backend:
               service:
-                name: sambunhi
+                name: sashimi
                 port:
                   number: 80
             pathType: Prefix
