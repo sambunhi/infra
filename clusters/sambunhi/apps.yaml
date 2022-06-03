@@ -10,7 +10,7 @@ spec:
   prune: false
   sourceRef:
     kind: GitRepository
-    name: sambunhi-infra-https
+    name: flux-system
   timeout: 2m0s
   wait: true
 
