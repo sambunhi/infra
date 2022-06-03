@@ -13,8 +13,10 @@ spec:
       author:
         email: flux@sambunhi.nycu.one
         name: Flux image automation
-      messageTemplate: >
-        apps: sashimi: {{range .Updated.Images}}{{.Repository}}:{{.Identifier}} {{end}}
+      messageTemplate: |
+        apps: sashimi: images: {{range .Updated.Images}}{{.Identifier}} {{end}}
+
+        {{range .Updated.Images}}{{println .}}{{end}}
   interval: 1m0s
   sourceRef:
     kind: GitRepository
