@@ -11,8 +11,8 @@ spec:
         branch: main
     commit:
       author:
-        email: ' '
-        name: Flux-image-update
+        email: xdavidwuph@gmail.com
+        name: Flux image automation
       messageTemplate: 'apps: sambunhi: {{range .Updated.Images}}{{.}}{{end}}'
   interval: 1m0s
   sourceRef:
