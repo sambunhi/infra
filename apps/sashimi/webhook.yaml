@@ -7,7 +7,7 @@ metadata:
 spec:
   events:
   - ping
-  - package
+  - workflow_run
   resources:
   - kind: ImageRepository
     name: fpm
