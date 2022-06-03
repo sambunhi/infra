@@ -5,7 +5,6 @@ resources:
   - gotk-sync.yaml
   - github-commit-status.yaml
   - commit-status-alert.yaml
-  - commit-status-alert-infrastructure.yaml
   - matrix.yaml
   - matrix-alert.yaml
   - https-source.yaml
