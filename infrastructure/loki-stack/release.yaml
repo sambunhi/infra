@@ -129,3 +129,17 @@ spec:
         prometheus.yml:
           rule_files:
             - /etc/config/recording.d/*.yaml
+      alertmanager:
+        extraSecretMounts:
+          - name: matrix-webhook
+            mountPath: /etc/matrix-webhook
+            subPath: url
+            secretName: matrix-webhook-url
+            readOnly: true
+      alertmanagerFiles:
+        alertmanager.yml:
+          receivers:
+            - name: matrix
+              slack_configs:
+                - api_url_file: /etc/matrix-webhook
+                  send_resolved: true
