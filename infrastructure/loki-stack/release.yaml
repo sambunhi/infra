@@ -96,11 +96,20 @@ spec:
               editable: true
               options:
                 path: /var/lib/grafana/dashboards/mariadb
+            - name: 'redis'
+              orgId: 1
+              folder: 'Redis'
+              type: file
+              disableDeletion: false
+              editable: true
+              options:
+                path: /var/lib/grafana/dashboards/redis
       dashboardsConfigMaps:
         flux: flux-dashboards
         node: node-dashboards
         prometheus: prometheus-dashboards
         mariadb: mariadb-dashboards
+        redis: redis-dashboards
     prometheus:
       enabled: true
       server:

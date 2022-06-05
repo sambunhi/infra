@@ -28,3 +28,7 @@ configMapGenerator:
     namespace: monitoring
     files:
       - ../../dashboard-prebuilts/mysqld_exporter/mysql-overview.json
+  - name: redis-dashboards
+    namespace: monitoring
+    files:
+      - ../../dashboard-prebuilts/redis_exporter/redis-overview.json
