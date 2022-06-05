@@ -9,6 +9,7 @@ configMapGenerator:
     namespace: monitoring
     files:
       - redis_exporter.yaml=../../dashboard-prebuilts/redis_exporter/rules.yaml
+      - mysqld_exporter.yaml=../../dashboard-prebuilts/mysqld_exporter/rules.yaml
   - name: flux-dashboards
     namespace: monitoring
     files:
