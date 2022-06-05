@@ -20,7 +20,7 @@
     // Selectors are inserted between {} in Prometheus queries.
     cadvisorSelector: 'job="kubernetes-nodes-cadvisor"',
     kubeletSelector: 'job="kubernetes-nodes"',
-    kubeStateMetricsSelector: 'app_kubernetes_io_name="kube-state-metrics"',
+    kubeStateMetricsSelector: 'job="kube-state-metrics"',
     nodeExporterSelector: 'component="node-exporter"',
     kubeSchedulerSelector: 'job="kube-scheduler"',
     kubeControllerManagerSelector: 'job="kube-controller-manager"',

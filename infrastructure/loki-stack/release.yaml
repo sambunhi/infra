@@ -132,6 +132,13 @@ spec:
         kubernetes: kubernetes-dashboards
     prometheus:
       enabled: true
+      kubeStateMetrics:
+        prometheusScrape: false
+      extraScrapeConfigs: |
+        - job_name: kube-state-metrics
+          static_configs:
+            - targets:
+              - monitoring-loki-stack-kube-state-metrics:8080
       server:
         global:
           scrape_interval: 30s

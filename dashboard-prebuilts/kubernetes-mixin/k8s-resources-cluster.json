@@ -128,7 +128,7 @@
                "steppedLine": false,
                "targets": [
                   {
-                     "expr": "sum(namespace_cpu:kube_pod_container_resource_requests:sum{cluster=\"$cluster\"}) / sum(kube_node_status_allocatable{app_kubernetes_io_name=\"kube-state-metrics\",resource=\"cpu\",cluster=\"$cluster\"})",
+                     "expr": "sum(namespace_cpu:kube_pod_container_resource_requests:sum{cluster=\"$cluster\"}) / sum(kube_node_status_allocatable{job=\"kube-state-metrics\",resource=\"cpu\",cluster=\"$cluster\"})",
                      "format": "time_series",
                      "instant": true,
                      "intervalFactor": 2,
@@ -207,7 +207,7 @@
                "steppedLine": false,
                "targets": [
                   {
-                     "expr": "sum(namespace_cpu:kube_pod_container_resource_limits:sum{cluster=\"$cluster\"}) / sum(kube_node_status_allocatable{app_kubernetes_io_name=\"kube-state-metrics\",resource=\"cpu\",cluster=\"$cluster\"})",
+                     "expr": "sum(namespace_cpu:kube_pod_container_resource_limits:sum{cluster=\"$cluster\"}) / sum(kube_node_status_allocatable{job=\"kube-state-metrics\",resource=\"cpu\",cluster=\"$cluster\"})",
                      "format": "time_series",
                      "instant": true,
                      "intervalFactor": 2,
@@ -365,7 +365,7 @@
                "steppedLine": false,
                "targets": [
                   {
-                     "expr": "sum(namespace_memory:kube_pod_container_resource_requests:sum{cluster=\"$cluster\"}) / sum(kube_node_status_allocatable{app_kubernetes_io_name=\"kube-state-metrics\",resource=\"memory\",cluster=\"$cluster\"})",
+                     "expr": "sum(namespace_memory:kube_pod_container_resource_requests:sum{cluster=\"$cluster\"}) / sum(kube_node_status_allocatable{job=\"kube-state-metrics\",resource=\"memory\",cluster=\"$cluster\"})",
                      "format": "time_series",
                      "instant": true,
                      "intervalFactor": 2,
@@ -444,7 +444,7 @@
                "steppedLine": false,
                "targets": [
                   {
-                     "expr": "sum(namespace_memory:kube_pod_container_resource_limits:sum{cluster=\"$cluster\"}) / sum(kube_node_status_allocatable{app_kubernetes_io_name=\"kube-state-metrics\",resource=\"memory\",cluster=\"$cluster\"})",
+                     "expr": "sum(namespace_memory:kube_pod_container_resource_limits:sum{cluster=\"$cluster\"}) / sum(kube_node_status_allocatable{job=\"kube-state-metrics\",resource=\"memory\",cluster=\"$cluster\"})",
                      "format": "time_series",
                      "instant": true,
                      "intervalFactor": 2,
@@ -764,7 +764,7 @@
                ],
                "targets": [
                   {
-                     "expr": "sum(kube_pod_owner{app_kubernetes_io_name=\"kube-state-metrics\", cluster=\"$cluster\"}) by (namespace)",
+                     "expr": "sum(kube_pod_owner{job=\"kube-state-metrics\", cluster=\"$cluster\"}) by (namespace)",
                      "format": "table",
                      "instant": true,
                      "intervalFactor": 2,
@@ -1141,7 +1141,7 @@
                ],
                "targets": [
                   {
-                     "expr": "sum(kube_pod_owner{app_kubernetes_io_name=\"kube-state-metrics\", cluster=\"$cluster\"}) by (namespace)",
+                     "expr": "sum(kube_pod_owner{job=\"kube-state-metrics\", cluster=\"$cluster\"}) by (namespace)",
                      "format": "table",
                      "instant": true,
                      "intervalFactor": 2,
