@@ -19,6 +19,7 @@ configMapGenerator:
       - node_exporter.yaml=../../dashboard-prebuilts/node_exporter/node_alerts.yaml
       - redis_exporter.yaml=../../dashboard-prebuilts/redis_exporter/alerts.yaml
       - mysqld_exporter.yaml=../../dashboard-prebuilts/mysqld_exporter/alerts.yaml
+      - kubernetes-mixin.yaml=../../dashboard-prebuilts/kubernetes-mixin/prometheus_alerts.yaml
   - name: flux-dashboards
     namespace: monitoring
     files:
