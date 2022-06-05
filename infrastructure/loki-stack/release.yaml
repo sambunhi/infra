@@ -136,6 +136,8 @@ spec:
             subPath: url
             secretName: matrix-webhook-url
             readOnly: true
+        strategy:
+          type: Recreate
       alertmanagerFiles:
         alertmanager.yml:
           receivers:
