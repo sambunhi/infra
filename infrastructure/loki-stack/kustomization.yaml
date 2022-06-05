@@ -11,6 +11,10 @@ configMapGenerator:
       - redis_exporter.yaml=../../dashboard-prebuilts/redis_exporter/rules.yaml
       - mysqld_exporter.yaml=../../dashboard-prebuilts/mysqld_exporter/rules.yaml
       - node_exporter.yaml=../../dashboard-prebuilts/node_exporter/node_rules.yaml
+  - name: prometheus-alerts
+    namespace: monitoring
+    files:
+      - prometheus.yaml=../../dashboard-prebuilts/prometheus/prometheus_alerts.yaml
   - name: flux-dashboards
     namespace: monitoring
     files:

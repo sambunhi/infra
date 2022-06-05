@@ -123,12 +123,18 @@ spec:
             subPath: ""
             configMap: prometheus-rules
             readOnly: true
+          - name: alert-rules
+            mountPath: /etc/config/alerts.d
+            subPath: ""
+            configMap: prometheus-alerts
+            readOnly: true
         strategy:
           type: Recreate
       serverFiles:
         prometheus.yml:
           rule_files:
             - /etc/config/recording.d/*.yaml
+            - /etc/config/alerts.d/*.yaml
       alertmanager:
         extraSecretMounts:
           - name: matrix-webhook
