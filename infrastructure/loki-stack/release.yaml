@@ -114,6 +114,14 @@ spec:
               editable: true
               options:
                 path: /var/lib/grafana/dashboards/traefik
+            - name: 'kubernetes'
+              orgId: 1
+              folder: 'Kubernetes'
+              type: file
+              disableDeletion: false
+              editable: true
+              options:
+                path: /var/lib/grafana/dashboards/kubernetes
       dashboardsConfigMaps:
         flux: flux-dashboards
         node: node-dashboards
@@ -121,6 +129,7 @@ spec:
         mariadb: mariadb-dashboards
         redis: redis-dashboards
         traefik: traefik-dashboards
+        kubernetes: kubernetes-dashboards
     prometheus:
       enabled: true
       server:

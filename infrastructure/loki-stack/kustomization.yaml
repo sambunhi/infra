@@ -46,3 +46,19 @@ configMapGenerator:
     namespace: monitoring
     files:
       - ../../dashboard-prebuilts/traefik/traefik-kubernetes.json
+  - name: kubernetes-dashboards
+    namespace: monitoring
+    files:
+      - ../../dashboard-prebuilts/kubernetes-mixin/cluster-total.json
+      - ../../dashboard-prebuilts/kubernetes-mixin/k8s-resources-cluster.json
+      - ../../dashboard-prebuilts/kubernetes-mixin/k8s-resources-namespace.json
+      - ../../dashboard-prebuilts/kubernetes-mixin/k8s-resources-node.json
+      - ../../dashboard-prebuilts/kubernetes-mixin/k8s-resources-pod.json
+      - ../../dashboard-prebuilts/kubernetes-mixin/k8s-resources-workload.json
+      - ../../dashboard-prebuilts/kubernetes-mixin/k8s-resources-workloads-namespace.json
+      - ../../dashboard-prebuilts/kubernetes-mixin/kubelet.json
+      - ../../dashboard-prebuilts/kubernetes-mixin/namespace-by-pod.json
+      - ../../dashboard-prebuilts/kubernetes-mixin/namespace-by-workload.json
+      - ../../dashboard-prebuilts/kubernetes-mixin/persistentvolumesusage.json
+      - ../../dashboard-prebuilts/kubernetes-mixin/pod-total.json
+      - ../../dashboard-prebuilts/kubernetes-mixin/workload-total.json
