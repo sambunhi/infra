@@ -117,4 +117,4 @@ spec:
       serverFiles:
         prometheus.yml:
           rule_files:
-            - /etc/config/recording.d/*
+            - /etc/config/recording.d/*.yaml
