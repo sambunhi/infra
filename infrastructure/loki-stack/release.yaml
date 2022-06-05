@@ -141,7 +141,7 @@ spec:
       alertmanagerFiles:
         alertmanager.yml:
           receivers:
-            - name: matrix
+            - name: default-receiver
               slack_configs:
                 - api_url_file: /etc/matrix-webhook
                   send_resolved: true
