@@ -1,0 +1,5 @@
+groups:
+- name: redis.rules
+  rules:
+  - expr: redis_memory_used_rss_bytes{namespace="redis"} / redis_memory_used_bytes{namespace="redis"}
+    record: redis_memory_fragmentation_ratio

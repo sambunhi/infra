@@ -106,4 +106,13 @@ spec:
       server:
         global:
           scrape_interval: 30s
-
+        extraConfigmapMounts:
+          - name: recording-rules
+            mountPath: /etc/config/recording.d
+            subPath: ""
+            configMap: prometheus-rules
+            readOnly: true
+      serverFiles:
+        prometheus.yml:
+          rule_files:
+            - /etc/config/recording.d/*
