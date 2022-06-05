@@ -1,6 +1,3 @@
 [submodule "external/flux"]
 	path = external/flux
 	url = https://github.com/fluxcd/flux2
-[submodule "external/traefik"]
-	path = external/traefik
-	url = https://github.com/traefik/traefik
