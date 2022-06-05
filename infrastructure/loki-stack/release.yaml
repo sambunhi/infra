@@ -132,7 +132,7 @@ spec:
         kubernetes: kubernetes-dashboards
     prometheus:
       enabled: true
-      kubeStateMetrics:
+      kube-state-metrics:
         prometheusScrape: false
       extraScrapeConfigs: |
         - job_name: kube-state-metrics
