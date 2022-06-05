@@ -112,6 +112,8 @@ spec:
             subPath: ""
             configMap: prometheus-rules
             readOnly: true
+        strategy:
+          type: Recreate
       serverFiles:
         prometheus.yml:
           rule_files:
