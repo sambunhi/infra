@@ -106,9 +106,9 @@ spec:
               editable: true
               options:
                 path: /var/lib/grafana/dashboards/redis
-            - name: 'traefik'
+            - name: 'traefik-dashboards'
               orgId: 1
-              folder: 'Traefik '
+              folder: 'Traefik'
               type: file
               disableDeletion: false
               editable: true
