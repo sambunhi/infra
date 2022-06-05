@@ -14,7 +14,7 @@ spec:
         name: grafana
   install:
     createNamespace: true
-  interval: 1m0s
+  interval: 10m0s
   targetNamespace: monitoring
   values:
     grafana:
