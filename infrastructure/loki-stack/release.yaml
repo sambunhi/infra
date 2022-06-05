@@ -26,6 +26,8 @@ spec:
       grafana.ini:
         server:
           root_url: https://grafana.sambunhi.nycu.one/
+        users:
+          viewers_can_edit: true
         auth.github:
           enabled: true
           allow_sign_up: true
