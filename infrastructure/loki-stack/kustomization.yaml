@@ -44,5 +44,4 @@ configMapGenerator:
   - name: traefik-dashboards
     namespace: monitoring
     files:
-      - ../../external/traefik/contrib/grafana/traefik.json
       - ../../external/traefik/contrib/grafana/traefik-kubernetes.json
