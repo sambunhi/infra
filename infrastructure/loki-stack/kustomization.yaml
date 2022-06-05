@@ -15,6 +15,7 @@ configMapGenerator:
     namespace: monitoring
     files:
       - prometheus.yaml=../../dashboard-prebuilts/prometheus/prometheus_alerts.yaml
+      - node_exporter.yaml=../../dashboard-prebuilts/node_exporter/node_alerts.yaml
   - name: flux-dashboards
     namespace: monitoring
     files:
