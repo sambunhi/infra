@@ -12,5 +12,11 @@ spec:
           containers:
             - image: ghcr.io/sambunhi/tokenizer:latest
               name: tokenizer
+              env:
+                - name: CRAWLER_TOKEN
+                  valueFrom:
+                    secretKeyRef:
+                      name: env
+                      key: CRAWLER_TOKEN
           restartPolicy: OnFailure
   schedule: '*/10 * * * *'

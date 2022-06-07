@@ -12,5 +12,11 @@ spec:
           containers:
             - image: ghcr.io/sambunhi/rss_crawler:latest
               name: rss-crawler
+              env:
+                - name: CRAWLER_TOKEN
+                  valueFrom:
+                    secretKeyRef:
+                      name: env
+                      key: CRAWLER_TOKEN
           restartPolicy: OnFailure
   schedule: 0 * * * *
