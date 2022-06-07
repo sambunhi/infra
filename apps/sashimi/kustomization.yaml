@@ -17,4 +17,4 @@ images:
 - name: ghcr.io/sambunhi/sashimi/fpm
   newTag: sha-9271056-50 # {"$imagepolicy": "sashimi:fpm:tag"}
 - name: ghcr.io/sambunhi/sashimi/nginx
-  newTag: sha-9271056-50 # {"$imagepolicy": "sashimi:nginx:tag"}
+  newTag: sha-9a45005-53 # {"$imagepolicy": "sashimi:nginx:tag"}
