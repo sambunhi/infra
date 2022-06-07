@@ -1,0 +1,16 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: tokenizer
+spec:
+  jobTemplate:
+    metadata:
+      name: tokenizer
+    spec:
+      template:
+        spec:
+          containers:
+            - image: ghcr.io/sambunhi/tokenizer:latest
+              name: tokenizer
+          restartPolicy: OnFailure
+  schedule: '*/10 * * * *'
