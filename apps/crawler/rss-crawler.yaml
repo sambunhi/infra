@@ -1,0 +1,16 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: rss-crawler
+spec:
+  jobTemplate:
+    metadata:
+      name: rss-crawler
+    spec:
+      template:
+        spec:
+          containers:
+            - image: ghcr.io/sambunhi/rss_crawler:latest
+              name: rss-crawler
+          restartPolicy: OnFailure
+  schedule: 0 * * * *
