@@ -15,6 +15,6 @@ resources:
 - webhook.yaml
 images:
 - name: ghcr.io/sambunhi/sashimi/fpm
-  newTag: sha-0127020-68 # {"$imagepolicy": "sashimi:fpm:tag"}
+  newTag: sha-2c9b60c-74 # {"$imagepolicy": "sashimi:fpm:tag"}
 - name: ghcr.io/sambunhi/sashimi/nginx
-  newTag: sha-e09dfa0-73 # {"$imagepolicy": "sashimi:nginx:tag"}
+  newTag: sha-2c9b60c-74 # {"$imagepolicy": "sashimi:nginx:tag"}
