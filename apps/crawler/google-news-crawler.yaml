@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: google-news-crawler
+spec:
+  jobTemplate:
+    metadata:
+      name: google-news-crawler
+    spec:
+      template:
+        spec:
+          containers:
+            - image: ghcr.io/sambunhi/google_news_crawler:latest
+              name: google-news-crawler
+  schedule: 0 * * * *
