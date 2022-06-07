@@ -26,6 +26,9 @@ In namespace > secret > data:
 		* `token`: random string used as webhook secret
 	* `config`
 		* `env`: Laravel .env
+* `crawler`
+	* `image-update-webhook-token`
+		* `token`: random string used as webhook secret
 
 # Bootstrapping / Upgrading flux
 
