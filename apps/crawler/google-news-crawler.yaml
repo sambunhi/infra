@@ -12,4 +12,5 @@ spec:
           containers:
             - image: ghcr.io/sambunhi/google_news_crawler:latest
               name: google-news-crawler
+          restartPolicy: OnFailure
   schedule: 0 * * * *
