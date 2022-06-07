@@ -16,8 +16,8 @@ resources:
 - webhook.yaml
 images:
 - name: ghcr.io/sambunhi/google_news_crawler
-  newTag: sha-c05a846-13 # {"$imagepolicy": "crawler:google-news-crawler:tag"}
+  newTag: sha-6a1ba79-15 # {"$imagepolicy": "crawler:google-news-crawler:tag"}
 - name: ghcr.io/sambunhi/rss_crawler
-  newTag: sha-c05a846-13 # {"$imagepolicy": "crawler:rss-crawler:tag"}
+  newTag: sha-6a1ba79-15 # {"$imagepolicy": "crawler:rss-crawler:tag"}
 - name: ghcr.io/sambunhi/tokenizer
-  newTag: sha-c05a846-13 # {"$imagepolicy": "crawler:tokenizer:tag"}
+  newTag: sha-6a1ba79-15 # {"$imagepolicy": "crawler:tokenizer:tag"}
