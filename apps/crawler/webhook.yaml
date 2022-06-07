@@ -1,0 +1,21 @@
+---
+apiVersion: notification.toolkit.fluxcd.io/v1beta1
+kind: Receiver
+metadata:
+  name: crawler-github
+  namespace: crawler
+spec:
+  events:
+  - ping
+  - workflow_run
+  resources:
+  - kind: ImageRepository
+    name: google-news-crawler
+  - kind: ImageRepository
+    name: rss-crawler
+  - kind: ImageRepository
+    name: tokenizer
+  secretRef:
+    name: image-update-webhook-token
+  type: github
+
