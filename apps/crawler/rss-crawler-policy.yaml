@@ -1,0 +1,16 @@
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImagePolicy
+metadata:
+  name: rss-crawler
+  namespace: crawler
+spec:
+  filterTags:
+    extract: $number
+    pattern: ^sha-[a-fA-F0-9]+-(?P<number>[1-9][0-9]*)$
+  imageRepositoryRef:
+    name: rss-crawler
+  policy:
+    numerical:
+      order: asc
+

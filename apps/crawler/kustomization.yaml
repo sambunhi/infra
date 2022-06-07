@@ -9,6 +9,9 @@ resources:
 - google-news-crawler-repo.yaml
 - rss-crawler-repo.yaml
 - tokenizer-repo.yaml
+- google-news-crawler-policy.yaml
+- rss-crawler-policy.yaml
+- tokenizer-policy.yaml
 images:
 - name: ghcr.io/sambunhi/google_news_crawler
   newTag: sha-64463c0-12
