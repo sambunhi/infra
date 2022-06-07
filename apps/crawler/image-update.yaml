@@ -1,0 +1,28 @@
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImageUpdateAutomation
+metadata:
+  name: image-update
+  namespace: crawler
+spec:
+  git:
+    checkout:
+      ref:
+        branch: main
+    commit:
+      author:
+        email: flux@sambunhi.nycu.one
+        name: Flux image automation
+      messageTemplate: |
+        apps: crawler: images: {{range .Updated.Images}}{{.Identifier}} {{end}}
+
+        {{range .Updated.Images}}{{println .}}{{end}}
+  interval: 1m0s
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+    namespace: flux-system
+  update:
+    path: apps/crawler
+    strategy: Setters
+
