@@ -1,0 +1,10 @@
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImageRepository
+metadata:
+  name: tokenizer
+  namespace: crawler
+spec:
+  image: ghcr.io/sambunhi/tokenizer
+  interval: 1h0m0s
+
